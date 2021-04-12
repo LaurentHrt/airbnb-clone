@@ -1,0 +1,22 @@
+{
+  "name": "airbnb-clone",
+  "version": "1.0.0",
+  "description": "Clone du site Airbnb en HTML ET CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaurentHrt/airbnb-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaurentHrt/airbnb-clone/issues"
+  },
+  "homepage": "https://github.com/LaurentHrt/airbnb-clone#readme",
+  "dependencies": {
+    "prettier": "^2.2.1"
+  }
+}

@@ -1,0 +1,191 @@
+.display-contents {
+    display: contents;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+        'Helvetica Neue', sans-serif;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: initial;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header,
+main,
+footer {
+    padding: 20px 50px;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+header a,
+header a:visited,
+header a:active {
+    color: white;
+}
+
+header .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .header-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .login {
+    display: flex;
+    flex-direction: row;
+}
+
+.slogan {
+    text-align: center;
+    font-size: 30px;
+}
+
+.slogan img {
+    width: 100%;
+}
+
+.logo {
+    width: 120px;
+}
+
+footer {
+    background-color: rgb(247, 247, 247);
+}
+
+footer .footer-1{
+    display: flex;
+    flex-direction: row;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card .title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-explorer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-explorer img {
+    margin-right: 10px;
+}
+
+.card-explorer .title {
+    margin-bottom: 5px;
+}
+
+.explorer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+}
+
+.vous img {
+    width: 100%;
+}
+
+.vous .card {
+    margin-right: 20px;
+}
+
+.vous-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.decouvrez img {
+    width: 100%;
+}
+
+.decouvrez-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.explorer .card img {
+    width: 72px;
+}
+
+.explorer .card .description {
+    font-size: 16px;
+}
+
+.decouvrez .card {
+    margin-right: 20px;
+}
+
+.decouvrez .card .description {
+    font-size: 14px;
+}
+
+.devenez {
+    position: relative;
+    color: white;
+}
+
+.devenez img {
+    width: 100%;
+}
+
+.devenez-text {
+    width: 40%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.devenez-text{
+    font-size: 18px;
+}
+
+.devenez-text h1{
+    font-size: 48px;
+    font-weight: 600;
+
+}
