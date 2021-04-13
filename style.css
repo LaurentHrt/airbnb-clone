@@ -29,11 +29,13 @@ ul {
 }
 
 ul li {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+.header-1,
 main,
-.footer-1 {
+.footer-1,
+.footer-2 {
     padding: 20px 150px;
 }
 
@@ -82,8 +84,60 @@ header .header-1 {
 header .login {
     display: grid;
     grid-template-columns: auto auto auto;
-    column-gap: 10px;
+    column-gap: 20px;
     align-items: center;
+}
+
+.searchbar-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.searchbar {
+    padding: 0 15px 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 850px;
+    height: 66px;
+    background-color: white;
+    border-radius: 50px;
+    border: solid 1px rgb(221, 221, 221);
+}
+
+.searchbar > div:nth-child(1),
+.searchbar > div:nth-child(2),
+.searchbar > div:nth-child(3) {
+    border-right: solid 1px rgb(221, 221, 221);
+}
+
+.searchbar > div:nth-child(2),
+.searchbar > div:nth-child(3),
+.searchbar > div:nth-child(4) {
+    padding-left: 20px;
+}
+
+.searchbar .searchIcon {
+    background-color: #ff385c;
+    border-radius: 50%;
+    width: 60px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar label {
+    color: black;
+}
+
+.searchbar input {
+    padding: 0;
+    margin-top: 5px;
+    border: none;
 }
 
 .burger {
@@ -108,12 +162,22 @@ header .login {
 }
 
 .slogan {
+    margin-top: 30px;
+}
+
+.sloganText {
+    padding: 50px 0;
     text-align: center;
     font-size: 30px;
 }
 
-.slogan img {
+.sloganImg {
+    margin: 0 100px;
+}
+
+.sloganImg img {
     width: 100%;
+    border-radius: 0;
 }
 
 .logo {
@@ -122,7 +186,7 @@ header .login {
 
 footer {
     background-color: rgb(247, 247, 247);
-    border-top: solid 1px rgb(235, 235, 235);
+    border-top: solid 1px #dddddd;
 }
 
 .footer-1 {
@@ -131,8 +195,30 @@ footer {
     justify-content: space-between;
 }
 
+.footer-2 > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-top: solid 1px #dddddd;
+}
+
 footer a:hover {
     text-decoration: underline;
+}
+
+.social {
+}
+
+.social a {
+    font-weight: 600;
+    margin: 0 10px;
+    text-decoration: underline;
+}
+
+.social i {
+    font-size: 16px;
 }
 
 img {
@@ -144,8 +230,18 @@ h1 {
     font-weight: 700;
 }
 
+.decouvrez h1 {
+    margin-bottom: 5px;
+}
+
+.decouvrez .card div {
+    margin: 5px 0;
+}
+
 h2 {
+    margin-top: 0;
     font-size: 26px;
+    font-weight: 400;
 }
 
 h4 {
@@ -244,15 +340,6 @@ h4 {
     font-weight: 600;
 }
 
-footer .social {
-    display: flex;
-    flex-direction: row;
-}
-
-footer .social div:first-child {
-    flex-grow: 3;
-}
-
 @media screen and (max-width: 1130px) {
     main,
     .footer-1 {
@@ -284,7 +371,7 @@ footer .social div:first-child {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-between;
-        border-bottom: solid 1px rgb(235, 235, 235);
+        border-bottom: solid 1px #dddddd;
     }
 }
 
