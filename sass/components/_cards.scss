@@ -1,0 +1,33 @@
+.card {
+    .title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .description {
+        font-size: 14px;
+    }
+}
+
+.card-explorer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .title {
+        margin-bottom: 5px;
+    }
+    img {
+        margin-right: 10px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    img {
+        width: 72px;
+    }
+}
+
+.card-decouvrez {
+    div {
+        margin: 5px 0;
+    }
+}

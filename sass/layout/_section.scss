@@ -1,0 +1,83 @@
+.devenez {
+    position: relative;
+    color: white;
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    button {
+        font-size: 16px;
+        background-color: white;
+        border-color: rgb(72, 72, 72);
+        border-radius: 8px;
+        width: 120px;
+        height: 36px;
+        @include large-and-lower {
+            font-size: 14px;
+        }
+    }
+    h1 {
+        margin-top: 0;
+    }
+}
+
+.devenez-text {
+    width: 40%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 18px;
+    h1 {
+        font-size: 48px;
+        font-weight: 600;
+        @include large-and-lower {
+            font-size: 30px;
+        }
+    }
+}
+
+.explorer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+    @include large-and-lower {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    a {
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+            @include large-and-lower {
+                display: none;
+            }
+        }
+    }
+}
+
+.vous {
+    img {
+        width: 100%;
+    }
+}
+
+.vous-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+
+.decouvrez {
+    h1 {
+        margin-bottom: 5px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.decouvrez-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+}

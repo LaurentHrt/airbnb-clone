@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <title>
             Locations de vacances, logements, hôtels, expériences et plus -
             Airbnb
@@ -17,7 +17,11 @@
     <body>
         <header>
             <div class="header-1">
-                <img src="img/Emblème-Airbnb.png" alt="" class="logo" />
+                <picture class="logo">
+                    <source srcset="img/logo.png" media="(min-width: 1130px)" />
+                    <img src="img/logo-small.png" alt="" />
+                </picture>
+
                 <nav class="menu">
                     <a class="display-contents" href="">Hébergements</a>
                     <a class="display-contents" href="">Expériences</a>
@@ -244,7 +248,7 @@
                 </h2>
                 <div class="decouvrez-container">
                     <a class="display-contents" href="">
-                        <div class="card">
+                        <div class="card card-decouvrez">
                             <img
                                 src="img/decouvrez/a6b08861-feb8-4a01-a76d-b33d2867b441.jpg"
                                 alt=""
@@ -257,7 +261,7 @@
                         </div>
                     </a>
                     <a class="display-contents" href="">
-                        <div class="card">
+                        <div class="card card-decouvrez">
                             <img
                                 src="img/decouvrez/ad109d56-2421-40cd-98e6-e114160dc85b.jpg"
                                 alt=""
@@ -270,7 +274,7 @@
                         </div>
                     </a>
                     <a class="display-contents" href="">
-                        <div class="card">
+                        <div class="card card-decouvrez">
                             <img
                                 src="img/decouvrez/b9adfc39-6e2a-4e5f-b6f3-681b306fae5c.jpg"
                                 alt=""
