@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    font-size: 14px;
 }
 
 * {
@@ -24,12 +25,16 @@ section {
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
-header,
+ul li {
+    margin-bottom: 15px;
+}
+
 main,
-footer {
-    padding: 20px 50px;
+.footer-1 {
+    padding: 20px 150px;
 }
 
 header {
@@ -75,11 +80,13 @@ header .login {
 
 footer {
     background-color: rgb(247, 247, 247);
+    border-top: solid 1px rgb(235, 235, 235);
 }
 
-footer .footer-1{
+.footer-1 {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 footer a:hover {
@@ -87,17 +94,23 @@ footer a:hover {
 }
 
 img {
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 26px;
+}
+
+h4 {
+    text-transform: uppercase;
+    color: rgb(34, 34, 34);
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .card .title {
@@ -173,19 +186,75 @@ h2 {
     width: 100%;
 }
 
+.devenez button {
+    font-size: 16px;
+    background-color: white;
+    border-color: rgb(72, 72, 72);
+    border-radius: 8px;
+    width: 120px;
+    height: 36px;
+}
+
 .devenez-text {
     width: 40%;
     position: absolute;
     top: 50px;
     left: 50px;
-}
-
-.devenez-text{
     font-size: 18px;
 }
 
-.devenez-text h1{
+.devenez-text h1 {
     font-size: 48px;
     font-weight: 600;
+}
 
+@media screen and (max-width: 1130px) {
+    main,
+    .footer-1 {
+        padding: 20px 30px;
+    }
+
+    .devenez button {
+        font-size: 14px;
+    }
+
+    .devenez-text {
+        width: 40%;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        font-size: 16px;
+    }
+
+    .devenez-text h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .footer-1 {
+        flex-direction: column;
+    }
+
+    .footer-1 ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        border-bottom: solid 1px rgb(235, 235, 235);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 742px) {
+    .footer-1 ul {
+        display: block;
+    }
 }
