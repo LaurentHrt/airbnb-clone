@@ -1,6 +1,10 @@
 footer {
     background-color: rgb(247, 247, 247);
     border-top: solid 1px #dddddd;
+    padding: 20px 80px;
+    @include large-and-lower {
+        padding: 20px 30px;
+    }
     a:hover {
         text-decoration: underline;
     }
@@ -12,14 +16,14 @@ footer {
     justify-content: space-between;
 
     ul {
-        @include small-and-lower {
-            display: block;
-        }
         @include large-and-lower {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             justify-content: space-between;
             border-bottom: solid 1px #dddddd;
+        }
+        @include small-and-lower {
+            display: block;
         }
     }
 
@@ -28,23 +32,42 @@ footer {
     }
 }
 
-.footer-2 > div {
+.footer-2 {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 10px;
     border-top: solid 1px #dddddd;
+    padding-top: 20px;
+    @include large-and-lower {
+        border-top: none;
+        flex-direction: column;
+        text-align: center;
+        div:last-child {
+            order: -1;
+        }
+    }
+    @include small-and-lower {
+        text-align: left;
+    }
 }
 
 .social {
+    white-space: nowrap;
     a {
         font-weight: 600;
-        margin: 0 10px;
+        margin: 0 10px 0 0;
         text-decoration: underline;
     }
 
     i {
         font-size: 16px;
     }
+    @include large-and-lower {
+        padding-bottom: 20px;
+    }
+}
+
+.copyright {
+    white-space: nowrap;
 }

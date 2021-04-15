@@ -3,14 +3,11 @@
 }
 
 main,
-.header-1,
-.footer-1,
-.footer-2 {
-    padding: 20px 150px;
+.header-1 {
+    padding: 20px 80px;
 }
 
-main,
-.footer-1 {
+main {
     @include large-and-lower {
         padding: 20px 30px;
     }
@@ -19,9 +16,11 @@ main,
 body {
     margin: 0;
     font-size: 14px;
+    color: rgb(34, 34, 34);
 }
 
-* {
+*,
+button {
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
         'Helvetica Neue', sans-serif;
 }

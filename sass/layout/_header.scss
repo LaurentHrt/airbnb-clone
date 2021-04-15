@@ -7,44 +7,52 @@ header {
     a:active {
         color: white;
     }
+}
 
-    .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+.header-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include medium-and-lower {
+        flex-wrap: wrap;
+    }
+}
 
-        a {
-            display: block;
-            position: relative;
-            padding: 10px 16px;
-            font-size: 16px;
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-            &:first-child::before {
-                background-color: white;
-                border-radius: 1px;
-                content: '';
-                height: 2px;
-                bottom: 0;
-                left: 40%;
-                position: absolute;
-                width: 18px;
-            }
+    a {
+        display: block;
+        position: relative;
+        padding: 10px 16px;
+        font-size: 16px;
+
+        &:first-child::before {
+            background-color: white;
+            border-radius: 1px;
+            content: '';
+            height: 2px;
+            bottom: 0;
+            left: 40%;
+            position: absolute;
+            width: 18px;
         }
     }
 
-    .header-1 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    @include medium-and-lower {
+        flex-grow: 2;
+        order: 3;
     }
+}
 
-    .login {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        column-gap: 20px;
-        align-items: center;
-    }
+.login {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    align-items: center;
 }
 
 .searchbar-container {
@@ -65,6 +73,11 @@ header {
     background-color: white;
     border-radius: 50px;
     border: solid 1px rgb(221, 221, 221);
+    margin: 0 20px;
+
+    @include medium-and-lower {
+        width: auto;
+    }
 
     > div:nth-child(1),
     > div:nth-child(2),
@@ -81,8 +94,10 @@ header {
     .searchIcon {
         background-color: #ff385c;
         border-radius: 50%;
-        width: 60px;
-        height: 48px;
+        min-width: 48px;
+        max-width: 48px;
+        min-height: 48px;
+        max-height: 48px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -96,6 +111,7 @@ header {
         padding: 0;
         margin-top: 5px;
         border: none;
+        width: 100%;
     }
 }
 

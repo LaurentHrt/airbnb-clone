@@ -3,15 +3,12 @@
 }
 
 main,
-.header-1,
-.footer-1,
-.footer-2 {
-  padding: 20px 150px;
+.header-1 {
+  padding: 20px 80px;
 }
 
 @media screen and (max-width: 1130px) {
-  main,
-.footer-1 {
+  main {
     padding: 20px 30px;
   }
 }
@@ -19,9 +16,11 @@ main,
 body {
   margin: 0;
   font-size: 14px;
+  color: #222222;
 }
 
-* {
+*,
+button {
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 
@@ -106,6 +105,21 @@ h4 {
   margin: 5px 0;
 }
 
+button {
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: white;
+  border-color: #484848;
+  border-radius: 8px;
+}
+@media screen and (max-width: 1130px) {
+  button {
+    font-size: 14px;
+    padding: 9px 16px;
+  }
+}
+
 header {
   background-color: black;
   color: white;
@@ -115,18 +129,31 @@ header a:visited,
 header a:active {
   color: white;
 }
-header .menu {
+
+.header-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 950px) {
+  .header-1 {
+    flex-wrap: wrap;
+  }
+}
+
+.menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-header .menu a {
+.menu a {
   display: block;
   position: relative;
   padding: 10px 16px;
   font-size: 16px;
 }
-header .menu a:first-child::before {
+.menu a:first-child::before {
   background-color: white;
   border-radius: 1px;
   content: "";
@@ -136,13 +163,14 @@ header .menu a:first-child::before {
   position: absolute;
   width: 18px;
 }
-header .header-1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+@media screen and (max-width: 950px) {
+  .menu {
+    flex-grow: 2;
+    order: 3;
+  }
 }
-header .login {
+
+.login {
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 20px;
@@ -167,6 +195,12 @@ header .login {
   background-color: white;
   border-radius: 50px;
   border: solid 1px #dddddd;
+  margin: 0 20px;
+}
+@media screen and (max-width: 950px) {
+  .searchbar {
+    width: auto;
+  }
 }
 .searchbar > div:nth-child(1),
 .searchbar > div:nth-child(2),
@@ -181,8 +215,10 @@ header .login {
 .searchbar .searchIcon {
   background-color: #ff385c;
   border-radius: 50%;
-  width: 60px;
-  height: 48px;
+  min-width: 48px;
+  max-width: 48px;
+  min-height: 48px;
+  max-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,6 +230,7 @@ header .login {
   padding: 0;
   margin-top: 5px;
   border: none;
+  width: 100%;
 }
 
 .burger {
@@ -253,19 +290,6 @@ header .login {
   height: 400px;
   object-fit: cover;
 }
-.devenez button {
-  font-size: 16px;
-  background-color: white;
-  border-color: #484848;
-  border-radius: 8px;
-  width: 120px;
-  height: 36px;
-}
-@media screen and (max-width: 1130px) {
-  .devenez button {
-    font-size: 14px;
-  }
-}
 .devenez h1 {
   margin-top: 0;
 }
@@ -284,6 +308,11 @@ header .login {
 @media screen and (max-width: 1130px) {
   .devenez-text h1 {
     font-size: 30px;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .devenez-text {
+    width: 280px;
   }
 }
 
@@ -313,6 +342,16 @@ header .login {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
 }
+@media screen and (max-width: 1130px) {
+  .vous-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .vous-container a:last-child {
+    display: none;
+  }
+}
 
 .decouvrez h1 {
   margin-bottom: 5px;
@@ -330,6 +369,12 @@ header .login {
 footer {
   background-color: #f7f7f7;
   border-top: solid 1px #dddddd;
+  padding: 20px 80px;
+}
+@media screen and (max-width: 1130px) {
+  footer {
+    padding: 20px 30px;
+  }
 }
 footer a:hover {
   text-decoration: underline;
@@ -340,11 +385,6 @@ footer a:hover {
   flex-direction: row;
   justify-content: space-between;
 }
-@media screen and (max-width: 742px) {
-  .footer-1 ul {
-    display: block;
-  }
-}
 @media screen and (max-width: 1130px) {
   .footer-1 ul {
     display: grid;
@@ -353,28 +393,60 @@ footer a:hover {
     border-bottom: solid 1px #dddddd;
   }
 }
+@media screen and (max-width: 811px) {
+  .footer-1 ul {
+    display: block;
+  }
+}
 @media screen and (max-width: 1130px) {
   .footer-1 {
     flex-direction: column;
   }
 }
 
-.footer-2 > div {
+.footer-2 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 10px;
   border-top: solid 1px #dddddd;
+  padding-top: 20px;
+}
+@media screen and (max-width: 1130px) {
+  .footer-2 {
+    border-top: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-2 div:last-child {
+    order: -1;
+  }
+}
+@media screen and (max-width: 811px) {
+  .footer-2 {
+    text-align: left;
+  }
 }
 
+.social {
+  white-space: nowrap;
+}
 .social a {
   font-weight: 600;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
   text-decoration: underline;
 }
 .social i {
   font-size: 16px;
+}
+@media screen and (max-width: 1130px) {
+  .social {
+    padding-bottom: 20px;
+  }
+}
+
+.copyright {
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=style.css.map */
